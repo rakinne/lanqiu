@@ -1,0 +1,1 @@
+A real-time web app allowing users to search for their favorite players and receive myriad of information. Built on ES6, Vanilla JS and Node.Js

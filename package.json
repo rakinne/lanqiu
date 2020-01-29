@@ -1,0 +1,17 @@
+{
+  "name": "lanqiu-web",
+  "version": "1.0.0",
+  "description": "The best information for the best athletes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rakinne Foote",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nba-api-client": "^1.0.9"
+  }
+}
