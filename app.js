@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nba = require('nba-api-client');
+const Player = require('./public/js/player.js');
+
 const app = express();
 const port = 3000;
 
@@ -15,15 +17,17 @@ app.get('/', (req, res) => {
 	res.render('index');
 });
 
-app.post('/players', (req, res, next) => {
+app.post('/player', (req, res, next) => {
 	const playerName = `${req.body.firstname} ${req.body.lastname}`;
 	const getPlayerID = nba.getPlayerID(playerName);
 	const playerID = getPlayerID.PlayerID;
-	const playerImg = nba.getPlayerHeadshotURL({ PlayerID: playerID });
-	const teamImg = nba.getTeamLogoURLs('HOU');
+	const player = new Player(playerName, playerID);
 
-	res.render('players', { name: playerName, playerImg: playerImg, teamImg: teamImg });
+	console.log(nba.getPlayerHeadshotURL(playerName));
 	console.log(playerID);
+	console.log(player.ballerImg());
+
+	res.render('players', { name: playerName, playerImg: player.ballerImg() });
 });
 
 app.listen(port, () => {

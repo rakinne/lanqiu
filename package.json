@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "nba-api-client": "^1.0.9"
+    "nba-api-client": "^1.0.9",
+    "request": "^2.88.0"
   }
 }
