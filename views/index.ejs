@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>lanqiu</title>
-</head>
-<body>
-    <h1>lanqiu by rakinne</h1>
-    <form id="search-form" action="/player" method="POST">
-        First Name: <input type="text" name="firstname"><br>
-        Last Name: <input type="text" name="lastname"><br>
-        <input type="submit" value="Search Player">
-    </form>
-</body>
-</html>
+<%- include('header') %>
+    <div class="jumbotron">
+        <h1 class="display-4">lanqiu by rakinne</h1>
+        <p class="lead">Welcome to Lanqiu, where you learn of all things relating to your favorite player. Go ahead and search for him now!</p>
+        <hr class="my-4">
+        <form id="search-form" action="/player" method="POST" autocomplete="off">
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                    <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                    <input class="btn btn-primary btn-lg" type="submit" value="Search Player">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+
+<%- include('footer') %>
